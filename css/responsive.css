@@ -1,0 +1,516 @@
+/* =====================================================
+   HOGSNES ELEKTRO - Responsive Styles
+   Mobile-First Approach
+   ===================================================== */
+
+/* =====================================================
+   LARGE DESKTOP (1200px+)
+   ===================================================== */
+@media (min-width: 1200px) {
+    .nav__cta {
+        display: inline-flex;
+    }
+
+    .hero__inner {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+}
+
+/* =====================================================
+   DESKTOP (1024px+)
+   ===================================================== */
+@media (min-width: 1024px) {
+    /* Already handled by base styles */
+}
+
+/* =====================================================
+   TABLET (768px - 1023px)
+   ===================================================== */
+@media (max-width: 1023px) {
+    :root {
+        --font-size-4xl: 2rem;
+        --font-size-3xl: 1.5rem;
+        --spacing-4xl: 4rem;
+        --spacing-3xl: 3rem;
+    }
+
+    /* Navigation */
+    .nav__list {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: var(--spacing-2xl);
+        gap: var(--spacing-lg);
+        transform: translateX(100%);
+        transition: transform var(--transition-normal);
+        z-index: 999;
+    }
+
+    .nav__list.active {
+        transform: translateX(0);
+    }
+
+    .nav__link {
+        font-size: var(--font-size-lg);
+        padding: var(--spacing-md) 0;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    /* Hero */
+    .hero__inner {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero__image {
+        display: none;
+    }
+
+    .hero__buttons {
+        justify-content: center;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Highlight Grid */
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About Page */
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .about-intro__image {
+        order: -1;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        order: 2;
+    }
+
+    .contact-form-wrapper {
+        order: 1;
+    }
+
+    /* Footer */
+    .footer__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__brand {
+        grid-column: 1 / -1;
+    }
+
+    /* Service Detail List */
+    .service-detail__list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Price Includes */
+    .price-includes {
+        grid-template-columns: 1fr;
+    }
+
+    /* Coverage Grid */
+    .coverage-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =====================================================
+   MOBILE (max-width: 767px)
+   ===================================================== */
+@media (max-width: 767px) {
+    :root {
+        --font-size-4xl: 1.75rem;
+        --font-size-3xl: 1.375rem;
+        --font-size-2xl: 1.25rem;
+        --spacing-4xl: 3rem;
+        --spacing-3xl: 2rem;
+        --spacing-2xl: 1.5rem;
+        --header-height: 70px;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+
+    /* Header */
+    .header__logo-text {
+        font-size: var(--font-size-lg);
+    }
+
+    .header__logo-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 500px;
+        padding-top: calc(var(--header-height) + var(--spacing-2xl));
+        padding-bottom: var(--spacing-2xl);
+    }
+
+    .hero__badge {
+        font-size: var(--font-size-xs);
+    }
+
+    .hero__subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero__buttons .btn {
+        width: 100%;
+    }
+
+    /* Quick Contact Bar */
+    .quick-contact__inner {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .quick-contact__item {
+        font-size: var(--font-size-sm);
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+
+    .service-card__icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .service-card__icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Features Grid */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-item__icon {
+        margin: 0 auto;
+    }
+
+    /* Highlight Boxes */
+    .highlight-box {
+        padding: var(--spacing-lg);
+    }
+
+    .highlight-box__price {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Service Area */
+    .service-area__map iframe {
+        height: 250px;
+    }
+
+    .service-area__locations {
+        gap: var(--spacing-xs);
+    }
+
+    .service-area__tag {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    /* CTA Section */
+    .cta .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cta .btn-group .btn {
+        width: 100%;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: calc(var(--header-height) + var(--spacing-2xl)) 0 var(--spacing-2xl);
+    }
+
+    /* Service Detail */
+    .service-detail {
+        padding: var(--spacing-lg);
+    }
+
+    .service-detail__header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-detail__icon {
+        margin: 0 auto;
+    }
+
+    .service-detail__header-content h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    .service-detail__description {
+        font-size: var(--font-size-base);
+    }
+
+    /* Values Grid */
+    .value-card {
+        padding: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .value-card__icon {
+        margin: 0 auto var(--spacing-md);
+    }
+
+    /* Qualifications */
+    .qualifications-list {
+        flex-direction: column;
+    }
+
+    .qualification-badge {
+        justify-content: center;
+    }
+
+    /* Price Table */
+    .price-table__header {
+        padding: var(--spacing-md);
+    }
+
+    .price-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+
+    .price-highlight {
+        padding: var(--spacing-lg);
+    }
+
+    .price-highlight__price {
+        font-size: var(--font-size-3xl);
+    }
+
+    /* Contact Form */
+    .contact-form-wrapper {
+        padding: var(--spacing-lg);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact Map */
+    .contact-map__wrapper iframe {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: var(--spacing-2xl) 0 var(--spacing-lg);
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+
+    .footer__brand {
+        text-align: center;
+    }
+
+    .footer__brand p {
+        max-width: none;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__legal {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    /* Button adjustments */
+    .btn--lg {
+        padding: var(--spacing-md) var(--spacing-xl);
+        font-size: var(--font-size-base);
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+    }
+}
+
+/* =====================================================
+   SMALL MOBILE (max-width: 374px)
+   ===================================================== */
+@media (max-width: 374px) {
+    :root {
+        --font-size-4xl: 1.5rem;
+        --font-size-3xl: 1.25rem;
+        --font-size-2xl: 1.125rem;
+    }
+
+    .header__logo-text {
+        font-size: var(--font-size-base);
+    }
+
+    .header__logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .header__logo-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* =====================================================
+   PRINT STYLES
+   ===================================================== */
+@media print {
+    .header,
+    .quick-contact,
+    .mobile-menu-toggle,
+    .btn,
+    .cta,
+    .contact-form-wrapper,
+    .contact-map,
+    footer {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+    }
+
+    .page-header {
+        background: none !important;
+        color: #000 !important;
+        padding: 20pt 0 !important;
+    }
+
+    .page-header h1,
+    .page-header p {
+        color: #000 !important;
+    }
+
+    .section {
+        padding: 20pt 0;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+        color: #666;
+    }
+}
+
+/* =====================================================
+   REDUCED MOTION
+   ===================================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =====================================================
+   DARK MODE SUPPORT (Optional)
+   ===================================================== */
+@media (prefers-color-scheme: dark) {
+    /* Can be implemented later if needed */
+}
+
+/* =====================================================
+   HIGH CONTRAST MODE
+   ===================================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-text: #000;
+        --color-text-light: #333;
+        --color-border: #666;
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+        border-width: 2px;
+    }
+}
